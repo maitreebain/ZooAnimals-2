@@ -10,19 +10,19 @@ import UIKit
 
 class CustomCellViewController: UIViewController {
 
-    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var customCellTabelView: UITableView!
     
     var animals = [ZooAnimal]() {
         didSet {
-            tableView.reloadData()
+//            customCellTabelView.reloadData()
         }
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        tableView.delegate = self
-        tableView.dataSource = self
+        customCellTabelView.delegate = self
+        customCellTabelView.dataSource = self
         loadData()
     }
     
